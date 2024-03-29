@@ -56,14 +56,6 @@ public class ArchersMod implements ModInitializer {
             .sanitize(true)
             .build();
 
-    public static ConfigManager<LootConfig> lootConfig = new ConfigManager<>
-            ("loot", Default.lootConfig)
-            .builder()
-            .setDirectory(ID)
-            .sanitize(true)
-            .constrain(LootConfig::constrainValues)
-            .build();
-
     @Override
     public void onInitialize() {
         tweaksConfig.refresh();
@@ -72,7 +64,6 @@ public class ArchersMod implements ModInitializer {
         SoundHelper.registerSounds();
         Effects.register();
         registerVillages();
-        lootConfig.refresh();
         subscribeEvents();
 
         // Apply some of the tweaks
@@ -110,8 +101,5 @@ public class ArchersMod implements ModInitializer {
     }
 
     private void subscribeEvents() {
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            LootHelper.configure(id, tableBuilder, ArchersMod.lootConfig.value, ArcherItems.entries);
-        });
     }
 }

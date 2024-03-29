@@ -13,6 +13,7 @@
 - Add French translation, thanks to YanisBft
 - Fix loot table injections not being configurable (missing `loot.json` file)
 - Migrate to RangedWeaponAPI for improved compatibility
+- Remove loot config, replaced by `config/rpg_series/loot.json`
 
 # 1.0.7
 
