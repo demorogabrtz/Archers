@@ -16,6 +16,7 @@
   "item.archers.golden_spear": "Lancia d'oro",
   "item.archers.diamond_spear": "Lancia di diamante",
   "item.archers.netherite_spear": "Lancia di netherite",
+  "item.archers.aeternium_spear": "Lancia di aeternium",  
 
   "item.archers.archer_armor_head": "Cappuccio da arciere",
   "item.archers.archer_armor_chest": "Tunica da arciere",
@@ -36,6 +37,10 @@
   "item.archers.netherite_longbow": "Arco lungo di netherite",
   "item.archers.netherite_rapid_crossbow": "Balestra leggera di netherite",
   "item.archers.netherite_heavy_crossbow": "Balestra pesante di netherite",
+  "item.archers.crystal_shortbow": "Arco corto di cristallo",
+  "item.archers.crystal_longbow": "Arco lungo di cristallo",
+  "item.archers.ruby_rapid_crossbow": "Balestra leggera di rubino",
+  "item.archers.ruby_heavy_crossbow": "Balestra pesante di rubino",  
 
   "item.archers.archer_spell_book": "Manuale di tiro",
 
@@ -49,7 +54,9 @@
   "effect.archers.entangling_roots": "Impigliato",
   "effect.archers.entangling_roots.description": "Riduce la velocità di movimento",  
   
-
+  "spell.archers.barrage.name": "Sbarramento",
+  "spell.archers.barrage.description": "Spara frecce multiple in rapida successione.",
+  
   "spell.archers.barrage.name": "Sbarramento",
   "spell.archers.barrage.description": "Scaglia frecce multiple in rapida successione.",
 
