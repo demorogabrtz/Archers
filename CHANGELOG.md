@@ -1,3 +1,7 @@
+# 1.1.1
+
+- Update Italian translation, thanks to Zano1999
+
 # 1.1.0
 
 - Add new Archer skill: Magic Arrow
