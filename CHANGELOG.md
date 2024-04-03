@@ -1,5 +1,6 @@
 # 1.1.1
 
+- Using latest Spell Engine, archery skills no longer perform additional random critical strikes
 - Update Italian translation, thanks to Zano1999
 
 # 1.1.0
