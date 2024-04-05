@@ -139,6 +139,6 @@
   ],
   "cost": {
     "item_id": "arrow",
-    "cooldown_duration": 12
+    "cooldown_duration": 8
   }
 }
