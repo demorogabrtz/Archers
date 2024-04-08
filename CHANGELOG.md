@@ -2,10 +2,9 @@
 
 - Using latest Spell Engine, archery skills no longer perform additional random critical strikes
 - Migrate to latest Ranged Weapon API
-- 
+- Archers Armor now provides Draw Speed bonus
 - Reduce cooldown of Magic Arrow
 - Update Italian translation, thanks to Zano1999
-
 
 # 1.1.0
 
