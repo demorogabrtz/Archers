@@ -126,23 +126,23 @@ public class Weapons {
 
     public static RangedEntry composite_longbow = bow("composite_longbow", durabilityTier1,
             () -> Ingredient.ofItems(Items.BONE),
-            new RangedConfig(pullTime_longBow, 8, null));
+            new RangedConfig(pullTime_longBow, 8, 0));
 
     public static RangedEntry mechanic_shortbow = bow("mechanic_shortbow", durabilityTier2,
             () -> Ingredient.ofItems(Items.REDSTONE),
-            new RangedConfig(pullTime_shortBow, 8F, null));
+            new RangedConfig(pullTime_shortBow, 8F, 0));
 
     public static RangedEntry royal_longbow = bow("royal_longbow", durabilityTier2,
             () -> Ingredient.ofItems(Items.GOLD_INGOT),
-            new RangedConfig(pullTime_longBow, 10, null));
+            new RangedConfig(pullTime_longBow, 10, 0));
 
     public static RangedEntry netherite_shortbow = bow("netherite_shortbow", durabilityTier3,
             () -> Ingredient.ofItems(Items.NETHERITE_INGOT),
-            new RangedConfig(pullTime_shortBow, 9, null));
+            new RangedConfig(pullTime_shortBow, 9, 0));
 
     public static RangedEntry netherite_longbow = bow("netherite_longbow", durabilityTier3,
             () -> Ingredient.ofItems(Items.NETHERITE_INGOT),
-            new RangedConfig(pullTime_longBow, 12, null));
+            new RangedConfig(pullTime_longBow, 12, 0));
 
 
     /**
@@ -151,19 +151,19 @@ public class Weapons {
 
     public static RangedEntry rapid_crossbow = crossbow("rapid_crossbow", durabilityTier2,
             () -> Ingredient.ofItems(Items.REDSTONE),
-            new RangedConfig(pullTime_rapidCrossbow, 8.5F, null));
+            new RangedConfig(pullTime_rapidCrossbow, 8.5F, 0));
 
     public static RangedEntry heavy_crossbow = crossbow("heavy_crossbow", durabilityTier2,
             () -> Ingredient.ofItems(Items.DIAMOND),
-            new RangedConfig(pullTime_heavyCrossbow, 13, null));
+            new RangedConfig(pullTime_heavyCrossbow, 13, 0));
 
     public static RangedEntry netherite_rapid_crossbow = crossbow("netherite_rapid_crossbow", durabilityTier3,
             () -> Ingredient.ofItems(Items.NETHERITE_INGOT),
-            new RangedConfig(pullTime_rapidCrossbow, 9.5F, null));
+            new RangedConfig(pullTime_rapidCrossbow, 9.5F, 0));
 
     public static RangedEntry netherite_heavy_crossbow = crossbow("netherite_heavy_crossbow", durabilityTier3,
             () -> Ingredient.ofItems(Items.NETHERITE_INGOT),
-            new RangedConfig(pullTime_heavyCrossbow, 15, null));
+            new RangedConfig(pullTime_heavyCrossbow, 15, 0));
 
 
     public static void register(Map<String, RangedConfig> rangedConfig, Map<String, ItemConfig.Weapon> meleeConfig) {
@@ -172,18 +172,18 @@ public class Weapons {
                     Weapon.CustomMaterial.matching(ToolMaterials.NETHERITE, ingredient("betterend:aeternium_ingot")), 8F);
             bow("crystal_shortbow", durabilityTier3,
                     ingredient("betterend:crystal_shards"),
-                    new RangedConfig(pullTime_shortBow, 10F, null));
+                    new RangedConfig(pullTime_shortBow, 10F, 0));
             bow("crystal_longbow", durabilityTier3,
                     ingredient("betterend:crystal_shards"),
-                    new RangedConfig(pullTime_longBow, 13.5F, null));
+                    new RangedConfig(pullTime_longBow, 13.5F, 0));
         }
         if (FabricLoader.getInstance().isModLoaded("betternether")) {
             crossbow("ruby_rapid_crossbow", durabilityTier3,
                     ingredient("betternether:nether_ruby"),
-                    new RangedConfig(pullTime_rapidCrossbow, 10.5F, null));
+                    new RangedConfig(pullTime_rapidCrossbow, 10.5F, 0));
             crossbow("ruby_heavy_crossbow", durabilityTier3,
                     ingredient("betternether:nether_ruby"),
-                    new RangedConfig(pullTime_heavyCrossbow, 17, null));
+                    new RangedConfig(pullTime_heavyCrossbow, 17, 0));
         }
 
         Weapon.register(meleeConfig, meleeEntries, Group.KEY);

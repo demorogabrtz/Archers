@@ -1,6 +1,8 @@
-# 1.1.1
+# 1.2.0
 
 - Using latest Spell Engine, archery skills no longer perform additional random critical strikes
+- Migrate to latest Ranged Weapon API
+- 
 - Reduce cooldown of Magic Arrow
 - Update Italian translation, thanks to Zano1999
 

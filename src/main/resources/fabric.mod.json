@@ -36,7 +36,7 @@
     "fabricloader": ">=0.14.0",
     "azurelibarmor": "*",
     "spell_engine": ">=${spell_engine_version}",
-    "projectile_damage": "*"
+    "ranged_weapon_api": ">=1.1.0"
   },
   "custom": {
     "modmenu": {
