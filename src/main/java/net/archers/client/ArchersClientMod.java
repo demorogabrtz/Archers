@@ -4,6 +4,7 @@ import net.archers.ArchersMod;
 import net.archers.block.ArcherBlocks;
 import net.archers.client.effect.HuntersMarkRenderer;
 import net.archers.client.effect.RootsRenderer;
+import net.archers.client.util.ArchersTooltip;
 import net.archers.effect.Effects;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -26,5 +27,7 @@ public class ArchersClientMod implements ClientModInitializer {
         ));
         CustomModelStatusEffect.register(Effects.huntersMark, new HuntersMarkRenderer());
         CustomModelStatusEffect.register(Effects.entanglingRoots, new RootsRenderer());
+
+        ArchersTooltip.init();
     }
 }
