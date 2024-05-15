@@ -57,7 +57,7 @@
   "spell.archers.barrage.description": "Dispara múltiples flechas en rápida sucesión.",
 
   "spell.archers.magic_arrow.name": "Flecha Mágica",
-  "spell.archers.magic_arrow.description" "Dispara una flecha mágica que atraviesa objetivos, infligiendo {damage} de daño a cada objetivo.",
+  "spell.archers.magic_arrow.description": "Dispara una flecha mágica que atraviesa objetivos, infligiendo {damage} de daño a cada objetivo.",
 
   "advancements.rpg_classes.obtain_arrow.title": "Camino del Arquero",
   "advancements.rpg_classes.obtain_arrow.description": "Obtén una Flecha",
