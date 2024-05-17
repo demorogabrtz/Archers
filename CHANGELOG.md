@@ -1,3 +1,7 @@
+# 1.2.2
+
+- Update Spanish translation, thanks to SirColor
+
 # 1.2.1
 
 - Using latest Spell Engine, archery skills no longer perform additional random critical strikes
