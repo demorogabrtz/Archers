@@ -12,7 +12,7 @@
     "item": "betternether:nether_ruby"
   },
   "base": {
-    "item": "paladins:netherite_spear"
+    "item": "archers:netherite_spear"
   },
   "result": {
     "item": "archers:ruby_spear"
