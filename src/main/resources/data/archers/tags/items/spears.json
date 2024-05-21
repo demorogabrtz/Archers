@@ -8,6 +8,10 @@
     {
       "id": "archers:aeternium_spear",
       "required": false
+    },
+    {
+      "id": "archers:ruby_spear",
+      "required": false
     }
   ]
 }

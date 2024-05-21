@@ -178,6 +178,8 @@ public class Weapons {
                     new RangedConfig(pullTime_longBow, 13.5F, 0));
         }
         if (FabricLoader.getInstance().isModLoaded("betternether")) {
+            spear("ruby_spear",
+                    Weapon.CustomMaterial.matching(ToolMaterials.NETHERITE, ingredient("betternether:nether_ruby")), 8F);
             crossbow("ruby_rapid_crossbow", durabilityTier3,
                     ingredient("betternether:nether_ruby"),
                     new RangedConfig(pullTime_rapidCrossbow, 10.5F, 0));

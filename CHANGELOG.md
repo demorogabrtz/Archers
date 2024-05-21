@@ -1,6 +1,8 @@
 # 1.2.2
 
 - Update Spanish translation, thanks to SirColor
+- Update Spear textures
+- Add Ruby Spear
 
 # 1.2.1
 
