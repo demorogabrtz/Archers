@@ -3,6 +3,7 @@
 - Update Spanish translation, thanks to SirColor
 - Update Spear textures
 - Add Ruby Spear
+- Update Fabric Loader to 15+ for embedded MixinExtras
 
 # 1.2.1
 
