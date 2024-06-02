@@ -32,11 +32,11 @@
     "archers.mixins.json"
   ],
   "depends": {
-    "minecraft": ">=1.20.1",
-    "fabricloader": ">=0.14.0",
+    "minecraft": ">=${minecraft_version}",
+    "fabricloader": ">=${fabric_loader_version}",
     "azurelibarmor": "*",
     "spell_engine": ">=${spell_engine_version}",
-    "ranged_weapon_api": ">=1.1.0"
+    "ranged_weapon_api": ">=${ranged_weapon_api_version}"
   },
   "custom": {
     "modmenu": {
