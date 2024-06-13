@@ -28,18 +28,23 @@ public class Weapons {
     public static final ArrayList<Weapon.Entry> meleeEntries = new ArrayList<>();
     public record RangedEntry(Identifier id, Item item, RangedConfig defaults) { }
 
-    private static Supplier<Ingredient> ingredient(String idString) {
-        return ingredient(idString, Items.DIAMOND);
+    private static Supplier<Ingredient> ingredient(String idString, boolean requirement, Item fallback) {
+        var id = new Identifier(idString);
+        if (requirement) {
+            return () -> {
+                return Ingredient.ofItems(fallback);
+            };
+        } else {
+            return () -> {
+                var item = Registries.ITEM.get(id);
+                var ingredient = item != null ? item : fallback;
+                return Ingredient.ofItems(ingredient);
+            };
+        }
     }
 
-    private static Supplier<Ingredient> ingredient(String idString, Item fallback) {
-        var id = new Identifier(idString);
-        return () -> {
-            var item = Registries.ITEM.get(id);
-            var ingredient = item != null ? item : fallback;
-            return Ingredient.ofItems(ingredient);
-        };
-    }
+    private static final String BETTER_END = "betterend";
+    private static final String BETTER_NETHER = "betternether";
 
     /**
      * MELEE WEAPONS
@@ -167,24 +172,23 @@ public class Weapons {
 
 
     public static void register(Map<String, RangedConfig> rangedConfig, Map<String, ItemConfig.Weapon> meleeConfig) {
-        if (FabricLoader.getInstance().isModLoaded("betterend")) {
+        if (ArchersMod.tweaksConfig.value.ignore_items_required_mods || FabricLoader.getInstance().isModLoaded(BETTER_END)) {
+            var aeterniumRepair = ingredient("betterend:aeternium_ingot", FabricLoader.getInstance().isModLoaded(BETTER_END), Items.NETHERITE_INGOT);
+            var crystalRepair = ingredient("betterend:crystal_shards", FabricLoader.getInstance().isModLoaded(BETTER_END), Items.NETHERITE_INGOT);
             spear("aeternium_spear",
-                    Weapon.CustomMaterial.matching(ToolMaterials.NETHERITE, ingredient("betterend:aeternium_ingot")), 8F);
-            bow("crystal_shortbow", durabilityTier3,
-                    ingredient("betterend:crystal_shards"),
+                    Weapon.CustomMaterial.matching(ToolMaterials.NETHERITE, aeterniumRepair), 8F);
+            bow("crystal_shortbow", durabilityTier3, crystalRepair,
                     new RangedConfig(pullTime_shortBow, 10F, 0));
-            bow("crystal_longbow", durabilityTier3,
-                    ingredient("betterend:crystal_shards"),
+            bow("crystal_longbow", durabilityTier3, crystalRepair,
                     new RangedConfig(pullTime_longBow, 13.5F, 0));
         }
-        if (FabricLoader.getInstance().isModLoaded("betternether")) {
+        if (ArchersMod.tweaksConfig.value.ignore_items_required_mods || FabricLoader.getInstance().isModLoaded(BETTER_NETHER)) {
+            var rubyRepair = ingredient("betternether:nether_ruby", FabricLoader.getInstance().isModLoaded(BETTER_NETHER), Items.NETHERITE_INGOT);
             spear("ruby_spear",
-                    Weapon.CustomMaterial.matching(ToolMaterials.NETHERITE, ingredient("betternether:nether_ruby")), 8F);
-            crossbow("ruby_rapid_crossbow", durabilityTier3,
-                    ingredient("betternether:nether_ruby"),
+                    Weapon.CustomMaterial.matching(ToolMaterials.NETHERITE, rubyRepair), 8F);
+            crossbow("ruby_rapid_crossbow", durabilityTier3, rubyRepair,
                     new RangedConfig(pullTime_rapidCrossbow, 10.5F, 0));
-            crossbow("ruby_heavy_crossbow", durabilityTier3,
-                    ingredient("betternether:nether_ruby"),
+            crossbow("ruby_heavy_crossbow", durabilityTier3, rubyRepair,
                     new RangedConfig(pullTime_heavyCrossbow, 17, 0));
         }
 
