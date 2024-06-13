@@ -66,7 +66,7 @@ public class Weapons {
     private static Weapon.Entry spear(String requiredMod, String name, Weapon.CustomMaterial material, float damage) {
         var settings = new Item.Settings();
         var item = new CustomWeaponItem(material, settings);
-        return addMelee(requiredMod, name, material, item, new ItemConfig.Weapon(damage, -3F));
+        return addMelee(requiredMod, name, material, item, new ItemConfig.Weapon(damage, -2.6F));
     }
     
     public static final Weapon.Entry flint_spear = spear("flint_spear",
