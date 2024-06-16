@@ -53,8 +53,8 @@
   "spell.archers.barrage.name": "连珠飞箭",
   "spell.archers.barrage.description": "快速连续发射多根箭。",
 
-  "advancements.rpg_classes.obtain_arrow.title": "弓手之道",
-  "advancements.rpg_classes.obtain_arrow.description": "拥有一把箭",
-  "advancements.rpg_classes.archer_mastery.title": "箭道专家",
-  "advancements.rpg_classes.archer_mastery.description": "完成整本弓术手册"
+  "advancements.rpg_series.obtain_arrow.title": "弓手之道",
+  "advancements.rpg_series.obtain_arrow.description": "拥有一把箭",
+  "advancements.rpg_series.spell_master_archer.title": "箭道专家",
+  "advancements.rpg_series.spell_master_archer.description": "完成整本弓术手册"
 }

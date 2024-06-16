@@ -53,8 +53,8 @@
   "spell.archers.barrage.name": "Barrage",
   "spell.archers.barrage.description": "Tire plusieurs flèches à la suite.",
 
-  "advancements.rpg_classes.obtain_arrow.title": "Voie de l'archer",
-  "advancements.rpg_classes.obtain_arrow.description": "Obtenez une flèche",
-  "advancements.rpg_classes.archer_mastery.title": "Expert en balistique",
-  "advancements.rpg_classes.archer_mastery.description": "Complétez entièrement le manuel de l'archerie"
+  "advancements.rpg_series.obtain_arrow.title": "Voie de l'archer",
+  "advancements.rpg_series.obtain_arrow.description": "Obtenez une flèche",
+  "advancements.rpg_series.spell_master_archer.title": "Expert en balistique",
+  "advancements.rpg_series.spell_master_archer.description": "Complétez entièrement le manuel de l'archerie"
 }

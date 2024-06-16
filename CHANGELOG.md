@@ -4,6 +4,7 @@
 - Update Spear textures
 - Add Ruby Spear
 - Rebalance Spear attributes
+- Restructure advancements
 - Update Fabric Loader to 15+ for embedded MixinExtras
 
 # 1.2.1

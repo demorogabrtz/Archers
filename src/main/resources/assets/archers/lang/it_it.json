@@ -60,8 +60,8 @@
   "spell.archers.barrage.name": "Sbarramento",
   "spell.archers.barrage.description": "Scaglia frecce multiple in rapida successione.",
 
-  "advancements.rpg_classes.obtain_arrow.title": "Via dell'arciere",
-  "advancements.rpg_classes.obtain_arrow.description": "Ottieni una freccia",
-  "advancements.rpg_classes.archer_mastery.title": "Esperto balistico",
-  "advancements.rpg_classes.archer_mastery.description": "Completa il manuale di tiro"
+  "advancements.rpg_series.obtain_arrow.title": "Via dell'arciere",
+  "advancements.rpg_series.obtain_arrow.description": "Ottieni una freccia",
+  "advancements.rpg_series.spell_master_archer.title": "Esperto balistico",
+  "advancements.rpg_series.spell_master_archer.description": "Completa il manuale di tiro"
 }

@@ -50,8 +50,8 @@
   "spell.archers.barrage.name": "Шквал",
   "spell.archers.barrage.description": "Производит серию выстрелов",
 
-  "advancements.rpg_classes.obtain_arrow.title": "Время охоты",
-  "advancements.rpg_classes.obtain_arrow.description": "Получите стрелу",
-  "advancements.rpg_classes.archer_mastery.title": "Выдающийся охотник",
-  "advancements.rpg_classes.archer_mastery.description": "Заполучите все умения лучника"
+  "advancements.rpg_series.obtain_arrow.title": "Время охоты",
+  "advancements.rpg_series.obtain_arrow.description": "Получите стрелу",
+  "advancements.rpg_series.spell_master_archer.title": "Выдающийся охотник",
+  "advancements.rpg_series.spell_master_archer.description": "Заполучите все умения лучника"
 }

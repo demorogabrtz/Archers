@@ -1,32 +1,32 @@
 {
   "display": {
     "icon": {
-      "item": "archers:royal_longbow"
+      "item": "archers:composite_longbow"
     },
     "title": {
-      "translate": "advancements.rpg_classes.archer_mastery.title"
+      "translate": "advancements.rpg_series.spell_novice_archer.title"
     },
     "description": {
-      "translate": "advancements.rpg_classes.archer_mastery.description"
+      "translate": "advancements.rpg_series.spell_novice_archer.description"
     },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "rpg_classes:obtain_arrow",
+  "parent": "rpg_series:path_choose_archer",
   "criteria": {
-    "cast": {
+    "bind": {
       "trigger": "spell_engine:spell_binding",
       "conditions": {
-        "complete": true,
+        "complete": false,
         "spell_pool": "archers:archer"
       }
     }
   },
   "requirements": [
     [
-      "cast"
+      "bind"
     ]
   ]
 }

@@ -59,8 +59,8 @@
   "spell.archers.magic_arrow.name": "Flecha Mágica",
   "spell.archers.magic_arrow.description": "Dispara una flecha mágica que atraviesa objetivos, infligiendo {damage} de daño a cada objetivo.",
 
-  "advancements.rpg_classes.obtain_arrow.title": "Camino del Arquero",
-  "advancements.rpg_classes.obtain_arrow.description": "Obtén una Flecha",
-  "advancements.rpg_classes.archer_mastery.title": "Experto en Balística",
-  "advancements.rpg_classes.archer_mastery.description": "Completa el Manual de Arquería"
+  "advancements.rpg_series.obtain_arrow.title": "Camino del Arquero",
+  "advancements.rpg_series.obtain_arrow.description": "Obtén una Flecha",
+  "advancements.rpg_series.spell_master_archer.title": "Experto en Balística",
+  "advancements.rpg_series.spell_master_archer.description": "Completa el Manual de Arquería"
 }
