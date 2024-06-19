@@ -17,6 +17,7 @@
   "item.archers.diamond_spear": "Lancia di diamante",
   "item.archers.netherite_spear": "Lancia di netherite",
   "item.archers.aeternium_spear": "Lancia di aeternium",  
+  "item.archers.ruby_spear": "Lancia di rubino",  
 
   "item.archers.archer_armor_head": "Cappuccio da arciere",
   "item.archers.archer_armor_chest": "Tunica da arciere",
@@ -57,11 +58,18 @@
   "spell.archers.barrage.name": "Sbarramento",
   "spell.archers.barrage.description": "Spara frecce multiple in rapida successione.",
   
-  "spell.archers.barrage.name": "Sbarramento",
-  "spell.archers.barrage.description": "Scaglia frecce multiple in rapida successione.",
+  "spell.archers.magic_arrow.name": "Freccia magica",
+  "spell.archers.magic_arrow.description": "Scocca una freccia magica che trafigge tutti i nemici sul suo cammino, infliggendo {damage} danni a ciascun bersaglio.",
 
-  "advancements.rpg_series.obtain_arrow.title": "Via dell'arciere",
-  "advancements.rpg_series.obtain_arrow.description": "Ottieni una freccia",
+  "advancements.rpg_series.path_choose_archer.title": "Via dell'arciere",
+  "advancements.rpg_series.path_choose_archer.description": "Crea un manuale di tiro",
+
+  "advancements.rpg_series.spell_novice_archer.title": "Colpo letale",
+  "advancements.rpg_series.spell_novice_archer.description": "Ottieni la tua prima abilità da arciere",
+
   "advancements.rpg_series.spell_master_archer.title": "Esperto balistico",
-  "advancements.rpg_series.spell_master_archer.description": "Completa il manuale di tiro"
+  "advancements.rpg_series.spell_master_archer.description": "Completa il manuale di tiro",
+
+  "advancements.rpg_series.obtain_arrow.title": "Via della freccia",
+  "advancements.rpg_series.obtain_arrow.description": "Ottieni una freccia"
 }
