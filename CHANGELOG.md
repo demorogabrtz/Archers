@@ -1,3 +1,7 @@
+# 1.2.3
+
+- Update Ruby crossbow textures and recipes
+
 # 1.2.2
 
 - Update Spanish translation, thanks to SirColor
