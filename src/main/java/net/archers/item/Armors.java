@@ -66,9 +66,7 @@ public class Armors {
                     new ArcherArmor(material, ArmorItem.Type.BOOTS, new Item.Settings())
             ))
             .put(entries)
-            .armorSet()
-            .allowSpellPowerEnchanting(false);
-
+            .armorSet();
 
     public static final Armor.Set archerArmorSet_T2 =
             create(
@@ -101,8 +99,7 @@ public class Armors {
                     new ArcherArmor(material, ArmorItem.Type.BOOTS, new Item.Settings())
             ))
             .put(entries)
-            .armorSet()
-            .allowSpellPowerEnchanting(false);
+            .armorSet();
 
     public static void register(Map<String, ItemConfig.ArmorSet> configs) {
         Armor.register(configs, entries, Group.KEY);

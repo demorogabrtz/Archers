@@ -1,3 +1,7 @@
+# 1.2.4
+
+- Remove some enchantment specific API calls
+
 # 1.2.3
 
 - Update Ruby crossbow textures and recipes
