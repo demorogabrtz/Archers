@@ -4,7 +4,7 @@
   "item.archers.auto_fire_hook.description_2": "모루에서 활 장비에 적용할 수 있습니다.",
   "item.ranged_weapon.pull_time": "%1$s초 당김 시간",
 
-  "block.archers.archers_workbench": "궁수의 작업대",
+  "block.archers.archers_workbench": "궁수 작업대",
   "block.archers.archers_workbench.hint": "궁수 장인 주민을 위한 작업대입니다.",
   "entity.minecraft.villager.archery_artisan": "궁수 장인",
   "entity.minecraft.villager.archers:archery_artisan": "궁수 장인",
@@ -20,14 +20,14 @@
   "item.archers.ruby_spear": "루비 창",
 
   "item.archers.archer_armor_head": "궁수 후드",
-  "item.archers.archer_armor_chest": "궁수 튜닉",
+  "item.archers.archer_armor_chest": "궁수 조끼",
   "item.archers.archer_armor_legs": "궁수 바지",
-  "item.archers.archer_armor_feet": "궁수 부츠",
+  "item.archers.archer_armor_feet": "궁수 장화",
 
   "item.archers.ranger_armor_head": "레인저 후드",
-  "item.archers.ranger_armor_chest": "레인저 튜닉",
+  "item.archers.ranger_armor_chest": "레인저 조끼",
   "item.archers.ranger_armor_legs": "레인저 바지",
-  "item.archers.ranger_armor_feet": "레인저 부츠",
+  "item.archers.ranger_armor_feet": "레인저 장화",
 
   "item.archers.composite_longbow": "복합 장궁",
   "item.archers.mechanic_shortbow": "기계식 단궁",
