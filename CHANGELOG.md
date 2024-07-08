@@ -1,3 +1,8 @@
+# 1.2.5
+
+- Update translations
+- Update some item textures
+
 # 1.2.4
 
 - Remove some enchantment specific API calls
