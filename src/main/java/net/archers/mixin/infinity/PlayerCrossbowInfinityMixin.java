@@ -15,21 +15,21 @@ import org.spongepowered.asm.mixin.injection.At;
 @Mixin(PlayerEntity.class)
 public class PlayerCrossbowInfinityMixin {
 
-    @WrapOperation(method = "getProjectileType",
-            at = @At(value = "FIELD", target = "Lnet/minecraft/entity/player/PlayerAbilities;creativeMode:Z"))
-    private static boolean wrap_loadProjectiles(
-            // Mixin Parameters
-            PlayerAbilities abilities, Operation<Boolean> original,
-            // Context Parameters
-            ItemStack stack
-    ) {
-        if (ArchersMod.tweaksConfig.value.enable_infinity_for_crossbows
-                && stack.getItem() instanceof CrossbowItem
-                && EnchantmentHelper.getLevel(Enchantments.INFINITY, stack) > 0) {
-            return true;
-        } else {
-            return original.call(abilities);
-        }
-    }
+//    @WrapOperation(method = "getProjectileType",
+//            at = @At(value = "FIELD", target = "Lnet/minecraft/entity/player/PlayerAbilities;creativeMode:Z"))
+//    private static boolean wrap_loadProjectiles(
+//            // Mixin Parameters
+//            PlayerAbilities abilities, Operation<Boolean> original,
+//            // Context Parameters
+//            ItemStack stack
+//    ) {
+//        if (ArchersMod.tweaksConfig.value.enable_infinity_for_crossbows
+//                && stack.getItem() instanceof CrossbowItem
+//                && EnchantmentHelper.getLevel(Enchantments.INFINITY, stack) > 0) {
+//            return true;
+//        } else {
+//            return original.call(abilities);
+//        }
+//    }
 
 }

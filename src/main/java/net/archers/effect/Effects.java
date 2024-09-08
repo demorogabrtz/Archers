@@ -7,28 +7,55 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.spell_engine.api.effect.HealthImpacting;
 import net.spell_engine.api.effect.Synchronized;
 
+import java.util.ArrayList;
+
 public class Effects {
-    public static final StatusEffect huntersMark = new CustomStatusEffect(StatusEffectCategory.HARMFUL, 0xff0000);
-    public static final StatusEffect entanglingRoots = new CustomStatusEffect(StatusEffectCategory.HARMFUL, 0x993333)
-                .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
-                    "112f3133-8a44-11ed-a1eb-0242ac120002",
-                        -0.5F,
-                        EntityAttributeModifier.Operation.MULTIPLY_BASE);
+    private static final ArrayList<Entry> entries = new ArrayList<>();
+    public static class Entry {
+        public final Identifier id;
+        public final StatusEffect effect;
+        public RegistryEntry<StatusEffect> registryEntry;
+
+        public Entry(String name, StatusEffect effect) {
+            this.id = Identifier.of(ArchersMod.ID, name);
+            this.effect = effect;
+            entries.add(this);
+        }
+
+        public void register() {
+            registryEntry = Registry.registerReference(Registries.STATUS_EFFECT, id, effect);
+        }
+
+        public Identifier modifierId() {
+            return Identifier.of(ArchersMod.ID, "effect." + id.getPath());
+        }
+    }
+
+    public static final Entry HUNTERS_MARK = new Entry("hunters_mark", 
+            new CustomStatusEffect(StatusEffectCategory.HARMFUL, 0xff0000));
+    
+    public static final Entry ENTANGLING_ROOTS = new Entry("entangling_roots",
+            new CustomStatusEffect(StatusEffectCategory.HARMFUL, 0x993333));
 
 
     public static void register() {
-        Synchronized.configure(huntersMark, true);
+        ENTANGLING_ROOTS.effect.addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
+                ENTANGLING_ROOTS.modifierId(),
+                -0.5F,
+                EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+        
+        Synchronized.configure(HUNTERS_MARK.effect, true);
         var modifierPerStack = 0.05F; // When changing this value, make sure to update the value in language files too
-        HealthImpacting.configureDamageTaken(huntersMark, modifierPerStack);
+        HealthImpacting.configureDamageTaken(HUNTERS_MARK.effect, modifierPerStack);
+        Synchronized.configure(ENTANGLING_ROOTS.effect, true);
 
-        Synchronized.configure(entanglingRoots, true);
-
-        int rawId = 743;
-        Registry.register(Registries.STATUS_EFFECT, rawId++, Identifier.of(ArchersMod.ID, "hunters_mark").toString(), huntersMark);
-        Registry.register(Registries.STATUS_EFFECT, rawId++, Identifier.of(ArchersMod.ID, "entangling_roots").toString(), entanglingRoots);
+        for (var entry: entries) {
+            entry.register();
+        }
     }
 }

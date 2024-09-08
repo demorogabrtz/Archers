@@ -1,6 +1,6 @@
 package net.archers.client.armor;
 
-import mod.azure.azurelibarmor.model.GeoModel;
+import mod.azure.azurelibarmor.common.api.client.model.GeoModel;
 import net.archers.ArchersMod;
 import net.archers.item.armor.ArcherArmor;
 import net.minecraft.util.Identifier;
@@ -8,14 +8,14 @@ import net.minecraft.util.Identifier;
 public class ArcherArmorModel extends GeoModel<ArcherArmor> {
     @Override
     public Identifier getModelResource(ArcherArmor armor) {
-        var name = armor.customMaterial.name();
-        return Identifier.of(ArchersMod.ID, "geo/" + name + ".geo.json");
+        var textureId = armor.getFirstLayerId();
+        return Identifier.of(ArchersMod.ID, "geo/" + textureId.getPath() + ".geo.json");
     }
 
     @Override
     public Identifier getTextureResource(ArcherArmor armor) {
-        var name = armor.customMaterial.name();
-        return Identifier.of(ArchersMod.ID, "textures/armor/" + name + ".png");
+        var textureId = armor.getFirstLayerId();
+        return Identifier.of(textureId.getNamespace(), "textures/armor/" + textureId.getPath() + ".png");
     }
 
     @Override

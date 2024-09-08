@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "S": {
-      "item": "minecraft:scute"
+      "item": "minecraft:turtle_scute"
     },
     "L": {
       "item": "minecraft:rabbit_hide"

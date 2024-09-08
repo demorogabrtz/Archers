@@ -2,13 +2,13 @@ package net.archers.block;
 
 import net.archers.ArchersMod;
 import net.archers.item.Group;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
-import net.minecraft.block.enums.Instrument;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -20,7 +20,7 @@ public class ArcherBlocks {
 
     public record Entry(String name, Block block, BlockItem item) {
         public Entry(String name, Block block) {
-            this(name, block, new BlockItem(block, new FabricItemSettings()));
+            this(name, block, new BlockItem(block, new Item.Settings()));
         }
     }
 
@@ -33,9 +33,9 @@ public class ArcherBlocks {
     }
 
     public static final Entry WORKBENCH = entry(ArcherWorkbenchBlock.ID.getPath(), new ArcherWorkbenchBlock(
-            FabricBlockSettings.create()
+            AbstractBlock.Settings.create()
                     .mapColor(MapColor.OAK_TAN)
-                    .instrument(Instrument.BASS)
+                    .instrument(NoteBlockInstrument.BASS)
                     .strength(2.5F)
                     .sounds(BlockSoundGroup.WOOD)
                     .nonOpaque()

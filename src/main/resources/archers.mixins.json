@@ -4,10 +4,10 @@
   "package": "net.archers.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "screen.AnvilScreenHandlerMixin",
     "infinity.CrossbowInfinityMixin",
     "infinity.PlayerCrossbowInfinityMixin",
-    "item.BowItemMixin"
+    "item.DataComponentTypesMixin",
+    "screen.AnvilScreenHandlerMixin"
   ],
   "client": [
     "client.autofire.LivingEntityMixin",

@@ -6,6 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
@@ -27,8 +28,6 @@ public class SoundHelper {
         // "sound_name", Float.valueOf(48F)
     );
 
-    public static final SoundEvent WORKBENCH = SoundEvent.of(ArcherWorkbenchBlock.ID);
-
     public static void registerSounds() {
         for (var soundKey: soundKeys) {
             var soundId = Identifier.of(ArchersMod.ID, soundKey);
@@ -38,9 +37,19 @@ public class SoundHelper {
                     : SoundEvent.of(soundId, customTravelDistance);
             Registry.register(Registries.SOUND_EVENT, soundId, soundEvent);
         }
-
-        Registry.register(Registries.SOUND_EVENT, ArcherWorkbenchBlock.ID, WORKBENCH);
     }
+
+    public record Entry(Identifier id, SoundEvent sound, RegistryEntry<SoundEvent> entry) {}
+
+    private static Entry registerSound(String key) {
+        var soundId = Identifier.of(ArchersMod.ID, key);
+        var event = SoundEvent.of(soundId);
+        var entry = Registry.registerReference(Registries.SOUND_EVENT, soundId, event);
+        return new Entry(soundId, event, entry);
+    }
+
+    public static final Entry WORKBENCH = registerSound(ArcherWorkbenchBlock.ID.getPath());
+    public static final Entry ARCHER_ARMOR_EQUIP = registerSound("cloth_equip");
 
     public static void playSoundEvent(World world, Entity entity, SoundEvent soundEvent) {
         playSoundEvent(world, entity, soundEvent, 1, 1);

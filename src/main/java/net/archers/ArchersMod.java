@@ -11,13 +11,12 @@ import net.archers.item.Armors;
 import net.archers.item.misc.Misc;
 import net.archers.util.SoundHelper;
 import net.archers.village.ArcherVillagers;
-import net.fabric_extras.ranged_weapon.api.CrossbowMechanics;
 import net.fabric_extras.structure_pool.api.StructurePoolConfig;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.item.v1.EnchantmentEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.enchantment.EnchantmentHelper;
+import net.fabricmc.fabric.api.util.TriState;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -25,14 +24,13 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.spell_engine.api.item.trinket.SpellBooks;
 import net.spell_engine.api.spell.SpellContainer;
-import net.spell_power.api.enchantment.EnchantmentRestriction;
 import net.tinyconfig.ConfigManager;
 
 public class ArchersMod implements ModInitializer {
     public static final String ID = "archers";
 
     public static ConfigManager<ArchersItemConfig> itemConfig = new ConfigManager<ArchersItemConfig>
-            ("items_v2", Default.itemConfig)
+            ("items_v3", Default.itemConfig)
             .builder()
             .setDirectory(ID)
             .sanitize(true)
@@ -64,13 +62,18 @@ public class ArchersMod implements ModInitializer {
 
         // Apply some of the tweaks
         if (tweaksConfig.value.enable_infinity_for_crossbows) {
-            EnchantmentRestriction.permit(Enchantments.INFINITY, itemStack -> itemStack.getItem() instanceof CrossbowItem);
+            EnchantmentEvents.ALLOW_ENCHANTING.register((enchantment, target, enchantingContext) -> {
+                if (enchantment.getKey().get().equals(Enchantments.INFINITY.getValue())) {
+                    return TriState.TRUE;
+                }
+                return TriState.DEFAULT;
+            });
         }
-        CrossbowMechanics.PullTime.modifier = (originalPullTime, crossbow) -> {
-            int quickCharge = EnchantmentHelper.getLevel(Enchantments.QUICK_CHARGE, crossbow);
-            var multiplier = tweaksConfig.value.quick_charge_enchantment_multiplier_per_level;
-            return originalPullTime - (int)((double)originalPullTime * multiplier) * quickCharge;
-        };
+//        CrossbowMechanics.PullTime.modifier = (originalPullTime, crossbow) -> {
+//            int quickCharge = EnchantmentHelper.getLevel(Enchantments.QUICK_CHARGE, crossbow);
+//            var multiplier = tweaksConfig.value.quick_charge_enchantment_multiplier_per_level;
+//            return originalPullTime - (int)((double)originalPullTime * multiplier) * quickCharge;
+//        };
     }
 
     private void registerItemGroup() {
