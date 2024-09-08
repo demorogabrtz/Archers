@@ -23,7 +23,7 @@
     " #X"
   ],
   "result": {
-    "item": "archers:composite_longbow"
+    "id": "archers:composite_longbow"
   },
   "show_notification": true
 }

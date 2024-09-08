@@ -14,7 +14,7 @@
     "C C"
   ],
   "result": {
-    "item": "archers:archer_armor_head"
+    "id": "archers:archer_armor_head"
   },
   "show_notification": true
 }

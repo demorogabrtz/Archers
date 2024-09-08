@@ -17,7 +17,7 @@
     "L L"
   ],
   "result": {
-    "item": "archers:ranger_armor_head"
+    "id": "archers:ranger_armor_head"
   },
   "show_notification": true
 }

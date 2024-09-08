@@ -7,7 +7,7 @@
     "item": "archers:mechanic_shortbow"
   },
   "result": {
-    "item": "archers:netherite_shortbow"
+    "id": "archers:netherite_shortbow"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"

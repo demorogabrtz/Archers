@@ -18,7 +18,7 @@
     "LLL"
   ],
   "result": {
-    "item": "archers:ranger_armor_chest"
+    "id": "archers:ranger_armor_chest"
   },
   "show_notification": true
 }

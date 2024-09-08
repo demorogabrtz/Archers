@@ -20,7 +20,7 @@
     "#  "
   ],
   "result": {
-    "item": "archers:iron_spear"
+    "id": "archers:iron_spear"
   },
   "show_notification": true
 }

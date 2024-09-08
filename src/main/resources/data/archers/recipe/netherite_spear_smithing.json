@@ -7,7 +7,7 @@
     "item": "archers:diamond_spear"
   },
   "result": {
-    "item": "archers:netherite_spear"
+    "id": "archers:netherite_spear"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"

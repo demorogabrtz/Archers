@@ -18,7 +18,7 @@
     " IX"
   ],
   "result": {
-    "item": "archers:mechanic_shortbow"
+    "id": "archers:mechanic_shortbow"
   },
   "show_notification": true
 }

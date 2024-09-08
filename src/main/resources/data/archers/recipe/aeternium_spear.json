@@ -27,7 +27,7 @@
     "#  "
   ],
   "result": {
-    "item": "archers:aeternium_spear"
+    "id": "archers:aeternium_spear"
   },
   "category": "equipment",
   "show_notification": true

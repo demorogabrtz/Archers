@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "archers:composite_longbow"
+      "id": "archers:composite_longbow"
     },
     "title": {
       "translate": "advancements.rpg_series.spell_novice_archer.title"

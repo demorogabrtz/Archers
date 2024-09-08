@@ -18,7 +18,7 @@
     "R R"
   ],
   "result": {
-    "item": "archers:ranger_armor_legs"
+    "id": "archers:ranger_armor_legs"
   },
   "show_notification": true
 }

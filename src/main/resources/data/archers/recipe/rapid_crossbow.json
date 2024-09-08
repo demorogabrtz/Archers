@@ -28,7 +28,7 @@
     " I "
   ],
   "result": {
-    "item": "archers:rapid_crossbow"
+    "id": "archers:rapid_crossbow"
   },
   "category": "equipment",
   "show_notification": true

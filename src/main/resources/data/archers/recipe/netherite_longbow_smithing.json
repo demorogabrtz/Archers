@@ -7,7 +7,7 @@
     "item": "archers:royal_longbow"
   },
   "result": {
-    "item": "archers:netherite_longbow"
+    "id": "archers:netherite_longbow"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"

@@ -25,7 +25,7 @@
     "DSX"
   ],
   "result": {
-    "item": "archers:royal_longbow"
+    "id": "archers:royal_longbow"
   },
   "category": "equipment",
   "show_notification": true

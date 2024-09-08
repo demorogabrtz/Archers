@@ -21,7 +21,7 @@
     " # "
   ],
   "result": {
-    "item": "archers:heavy_crossbow"
+    "id": "archers:heavy_crossbow"
   },
   "show_notification": true
 }

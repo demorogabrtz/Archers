@@ -20,7 +20,7 @@
     "#  "
   ],
   "result": {
-    "item": "archers:flint_spear"
+    "id": "archers:flint_spear"
   },
   "show_notification": true
 }

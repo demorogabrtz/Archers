@@ -20,7 +20,7 @@
     "###"
   ],
   "result": {
-    "item": "archers:archers_workbench"
+    "id": "archers:archers_workbench"
   },
   "show_notification": false
 }
