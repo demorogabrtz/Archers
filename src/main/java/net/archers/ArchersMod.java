@@ -63,7 +63,7 @@ public class ArchersMod implements ModInitializer {
         // Apply some of the tweaks
         if (tweaksConfig.value.enable_infinity_for_crossbows) {
             EnchantmentEvents.ALLOW_ENCHANTING.register((enchantment, target, enchantingContext) -> {
-                if (enchantment.getKey().get().equals(Enchantments.INFINITY.getValue())) {
+                if (enchantment.getKey().get().getValue().equals(Enchantments.INFINITY.getValue())) {
                     return TriState.TRUE;
                 }
                 return TriState.DEFAULT;
