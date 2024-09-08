@@ -1,4 +1,4 @@
-package net.archers.mixin.item;
+package net.archers.mixin.component;
 
 import net.archers.component.ArcherComponents;
 import net.minecraft.component.DataComponentTypes;

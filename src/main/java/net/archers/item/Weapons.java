@@ -104,6 +104,7 @@ public class Weapons {
 
     private static Weapon.Entry addMelee(String name, Weapon.CustomMaterial material, Weapon.Factory factory, ItemConfig.Weapon defaults) {
         var entry = new Weapon.Entry(ArchersMod.ID, name, material, factory, defaults, null);
+        meleeEntries.add(entry);
         return entry;
     }
 
@@ -227,6 +228,7 @@ public class Weapons {
         }
 
         Weapon.register(meleeConfig, meleeEntries, Group.KEY);
+
         for (var entry: rangedEntries) {
             var config = rangedConfig.get(entry.id.toString());
             if (config == null) {

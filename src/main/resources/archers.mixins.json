@@ -4,9 +4,7 @@
   "package": "net.archers.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "infinity.CrossbowInfinityMixin",
-    "infinity.PlayerCrossbowInfinityMixin",
-    "item.DataComponentTypesMixin",
+    "component.DataComponentTypesMixin",
     "screen.AnvilScreenHandlerMixin"
   ],
   "client": [
