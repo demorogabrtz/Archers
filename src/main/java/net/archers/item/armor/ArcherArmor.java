@@ -21,7 +21,7 @@ import java.util.function.Supplier;
 
 public class ArcherArmor extends CustomArmor implements GeoItem {
 
-    public static final Identifier equipSoundId = new Identifier(ArchersMod.ID, "cloth_equip");
+    public static final Identifier equipSoundId = Identifier.of(ArchersMod.ID, "cloth_equip");
     public static final SoundEvent equipSound = SoundEvent.of(equipSoundId);
 
     public ArcherArmor(Armor.CustomMaterial material, Type type, Settings settings) {

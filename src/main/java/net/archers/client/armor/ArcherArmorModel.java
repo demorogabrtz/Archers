@@ -9,13 +9,13 @@ public class ArcherArmorModel extends GeoModel<ArcherArmor> {
     @Override
     public Identifier getModelResource(ArcherArmor armor) {
         var name = armor.customMaterial.name();
-        return new Identifier(ArchersMod.ID, "geo/" + name + ".geo.json");
+        return Identifier.of(ArchersMod.ID, "geo/" + name + ".geo.json");
     }
 
     @Override
     public Identifier getTextureResource(ArcherArmor armor) {
         var name = armor.customMaterial.name();
-        return new Identifier(ArchersMod.ID, "textures/armor/" + name + ".png");
+        return Identifier.of(ArchersMod.ID, "textures/armor/" + name + ".png");
     }
 
     @Override

@@ -19,7 +19,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class ArcherWorkbenchBlock extends Block {
-    public static Identifier ID = new Identifier(ArchersMod.ID, "archers_workbench");
+    public static Identifier ID = Identifier.of(ArchersMod.ID, "archers_workbench");
     public ArcherWorkbenchBlock(Settings settings) {
         super(settings);
     }

@@ -83,7 +83,7 @@ public class ArchersMod implements ModInitializer {
 
     private void registerItems() {
         itemConfig.refresh();
-        SpellBooks.createAndRegister(new Identifier(ID, "archer"), SpellContainer.ContentType.ARCHERY, Group.KEY);
+        SpellBooks.createAndRegister(Identifier.of(ID, "archer"), SpellContainer.ContentType.ARCHERY, Group.KEY);
         ArcherBlocks.register();
         Misc.register();
         Weapons.register(itemConfig.value.ranged_weapons, itemConfig.value.melee_weapons);

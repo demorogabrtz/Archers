@@ -23,7 +23,7 @@ public class ArchersClientMod implements ClientModInitializer {
         CustomModels.registerModelIds(List.of(
                 HuntersMarkRenderer.modelId,
                 RootsRenderer.modelId,
-                new Identifier(ArchersMod.ID, "projectile/magic_arrow")
+                Identifier.of(ArchersMod.ID, "projectile/magic_arrow")
         ));
         CustomModelStatusEffect.register(Effects.huntersMark, new HuntersMarkRenderer());
         CustomModelStatusEffect.register(Effects.entanglingRoots, new RootsRenderer());

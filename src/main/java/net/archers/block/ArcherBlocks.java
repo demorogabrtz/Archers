@@ -43,8 +43,8 @@ public class ArcherBlocks {
 
     public static void register() {
         for (var entry : all) {
-            Registry.register(Registries.BLOCK, new Identifier(ArchersMod.ID, entry.name), entry.block);
-            Registry.register(Registries.ITEM, new Identifier(ArchersMod.ID, entry.name), entry.item());
+            Registry.register(Registries.BLOCK, Identifier.of(ArchersMod.ID, entry.name), entry.block);
+            Registry.register(Registries.ITEM, Identifier.of(ArchersMod.ID, entry.name), entry.item());
         }
         ItemGroupEvents.modifyEntriesEvent(Group.KEY).register((content) -> {
             for (var entry : all) {

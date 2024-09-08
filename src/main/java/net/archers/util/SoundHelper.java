@@ -31,7 +31,7 @@ public class SoundHelper {
 
     public static void registerSounds() {
         for (var soundKey: soundKeys) {
-            var soundId = new Identifier(ArchersMod.ID, soundKey);
+            var soundId = Identifier.of(ArchersMod.ID, soundKey);
             var customTravelDistance = soundDistances.get(soundKey);
             var soundEvent = (customTravelDistance == null)
                     ? SoundEvent.of(soundId)

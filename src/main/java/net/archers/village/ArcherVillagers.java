@@ -27,13 +27,13 @@ public class ArcherVillagers {
     public static final String ARCHERY_ARTISAN = "archery_artisan";
 
     public static PointOfInterestType registerPOI(String name, Block block) {
-        return PointOfInterestHelper.register(new Identifier(ArchersMod.ID, name),
+        return PointOfInterestHelper.register(Identifier.of(ArchersMod.ID, name),
                 1, 10, ImmutableSet.copyOf(block.getStateManager().getStates()));
     }
 
     public static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> workStation) {
-        var id = new Identifier(ArchersMod.ID, name);
-        return Registry.register(Registries.VILLAGER_PROFESSION, new Identifier(ArchersMod.ID, name), new VillagerProfession(
+        var id = Identifier.of(ArchersMod.ID, name);
+        return Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(ArchersMod.ID, name), new VillagerProfession(
                 id.toString(),
                 (entry) -> {
                     return entry.matchesKey(workStation);
@@ -78,7 +78,7 @@ public class ArcherVillagers {
         var poi = registerPOI(ARCHERY_ARTISAN, ArcherBlocks.WORKBENCH.block());
         var profession = registerProfession(
                 ARCHERY_ARTISAN,
-                RegistryKey.of(Registries.POINT_OF_INTEREST_TYPE.getKey(), new Identifier(ArchersMod.ID, ARCHERY_ARTISAN)));
+                RegistryKey.of(Registries.POINT_OF_INTEREST_TYPE.getKey(), Identifier.of(ArchersMod.ID, ARCHERY_ARTISAN)));
 
         List<Offer> offers = List.of(
                 Offer.sell(1, new ItemStack(Items.ARROW, 8), 2, 128, 1, 0.01f),

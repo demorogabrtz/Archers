@@ -29,7 +29,7 @@ public class Weapons {
     public record RangedEntry(Identifier id, Item item, RangedConfig defaults) { }
 
     private static Supplier<Ingredient> ingredient(String idString, boolean requirement, Item fallback) {
-        var id = new Identifier(idString);
+        var id = Identifier.of(idString);
         if (requirement) {
             return () -> {
                 return Ingredient.ofItems(fallback);
@@ -94,14 +94,14 @@ public class Weapons {
         var settings = new FabricItemSettings().maxDamage(durability);
         var item = new CustomBow(settings, repairIngredientSupplier);
         ((CustomRangedWeapon)item).configure(defaults);
-        return addRanged(new Identifier(ArchersMod.ID, name), item, defaults);
+        return addRanged(Identifier.of(ArchersMod.ID, name), item, defaults);
     }
 
     private static RangedEntry crossbow(String name, int durability, Supplier<Ingredient> repairIngredientSupplier, RangedConfig defaults) {
         var settings = new FabricItemSettings().maxDamage(durability);
         var item = new CustomCrossbow(settings, repairIngredientSupplier);
         ((CustomRangedWeapon)item).configure(defaults);
-        return addRanged(new Identifier(ArchersMod.ID, name), item, defaults);
+        return addRanged(Identifier.of(ArchersMod.ID, name), item, defaults);
     }
 
     private static final int durabilityTier0 = 384;
