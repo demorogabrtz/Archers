@@ -1,3 +1,7 @@
+# 2.0.1
+
+- Fix Power enchantment bonus per level
+
 # 2.0.0
 
 - Update to Minecraft 1.21.1
