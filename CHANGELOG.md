@@ -1,3 +1,7 @@
+# 2.0.2
+
+- Allow running on 1.21
+
 # 2.0.1
 
 - Fix Power enchantment bonus per level
