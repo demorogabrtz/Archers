@@ -18,7 +18,7 @@ public class Default {
     static {
         itemConfig = new ArchersItemConfig();
         villages = new StructurePoolConfig();
-        var largeWeight = 5;
+        var largeWeight = 0;
         var smallWeight = 5;
         var limit = 1;
         villages.entries = new ArrayList<>(List.of(

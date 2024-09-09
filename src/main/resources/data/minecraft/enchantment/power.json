@@ -12,7 +12,7 @@
           "per_level_above_first": 0.05
         },
         "attribute": "ranged_weapon:damage",
-        "id": "spell_power:spell_power",
+        "id": "minecraft:enchantment.power",
         "operation": "add_multiplied_base"
       }
     ]
