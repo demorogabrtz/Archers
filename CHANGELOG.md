@@ -1,3 +1,7 @@
+# 2.0.3
+
+- Lowered Fabric API version requirement
+
 # 2.0.2
 
 - Allow running on 1.21
