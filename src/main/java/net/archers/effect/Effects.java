@@ -44,14 +44,15 @@ public class Effects {
 
 
     public static void register() {
+        var config = ArchersMod.tweaksConfig.value;
+
         ENTANGLING_ROOTS.effect.addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
                 ENTANGLING_ROOTS.modifierId(),
                 -0.5F,
                 EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE);
         
         Synchronized.configure(HUNTERS_MARK.effect, true);
-        var modifierPerStack = 0.05F; // When changing this value, make sure to update the value in language files too
-        HealthImpacting.configureDamageTaken(HUNTERS_MARK.effect, modifierPerStack);
+        HealthImpacting.configureDamageTaken(HUNTERS_MARK.effect, config.hunters_mark_damage_per_stack);
         Synchronized.configure(ENTANGLING_ROOTS.effect, true);
 
         for (var entry: entries) {

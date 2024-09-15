@@ -40,7 +40,7 @@
   "item.archers.archer_spell_book": "Пособие лучника",
 
   "spell.archers.power_shot.name": "Мощный выстрел",
-  "spell.archers.power_shot.description": "Производит мощный выстрел снаряда и накладывает на цель метку длительностью в {effect_duration} сек., тем самым повышая её урон на 5%%. Действие эффекта может складываться до {effect_amplifier} раз",
+  "spell.archers.power_shot.description": "Производит мощный выстрел снаряда и накладывает на цель метку длительностью в {effect_duration} сек., тем самым повышая её урон на {damage_taken}. Действие эффекта может складываться до {effect_amplifier} раз",
   "effect.archers.hunters_mark": "Метка охотника",
 
   "spell.archers.entangling_roots.name": "Заросшие корни",

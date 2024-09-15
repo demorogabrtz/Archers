@@ -40,7 +40,7 @@
   "item.archers.archer_spell_book": "Manuel de l'archerie",
 
   "spell.archers.power_shot.name": "Tir puissant",
-  "spell.archers.power_shot.description": "Tire une flèche puissante qui inflige la marque de chasseur à la cible pendant {effect_duration} secondes, augmentant ses dégâts reçus par 5%%, s'accumumant jusqu'à {effect_amplifier} fois.",
+  "spell.archers.power_shot.description": "Tire une flèche puissante qui inflige la marque de chasseur à la cible pendant {effect_duration} secondes, augmentant ses dégâts reçus par {damage_taken}, s'accumumant jusqu'à {effect_amplifier} fois.",
   "effect.archers.hunters_mark": "Marque",
   "effect.archers.hunters_mark.description": "Augmente les dégâts reçus de toutes sources par 5%%",
 

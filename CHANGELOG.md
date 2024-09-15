@@ -1,3 +1,7 @@
+# 2.0.4
+
+- Configurable Power Shot bonus damage
+
 # 2.0.3
 
 - Lowered Fabric API version requirement
