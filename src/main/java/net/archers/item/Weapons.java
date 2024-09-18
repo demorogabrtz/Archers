@@ -14,6 +14,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.spell_engine.api.item.ItemConfig;
+import net.spell_engine.api.item.Tiers;
 import net.spell_engine.api.item.weapon.SpellWeaponItem;
 import net.spell_engine.api.item.weapon.Weapon;
 
@@ -226,6 +227,7 @@ public class Weapons {
             crossbow("ruby_heavy_crossbow", durabilityTier3, rubyRepair,
                     new RangedConfig(17, pullTime_heavyCrossbow,0));
         }
+        var netheriteTier = Tiers.unsafe("netherite");
 
         Weapon.register(meleeConfig, meleeEntries, Group.KEY);
 
@@ -235,7 +237,12 @@ public class Weapons {
                 config = entry.defaults;
                 rangedConfig.put(entry.id.toString(), config);
             }
-            var item = entry.create(new Item.Settings());
+            var settings = new Item.Settings();
+            var tier = Tiers.unsafe(entry.id());
+            if (tier >= netheriteTier) {
+                settings.fireproof();
+            }
+            var item = entry.create(settings);
             Registry.register(Registries.ITEM, entry.id, item);
         }
         ItemGroupEvents.modifyEntriesEvent(Group.KEY).register((content) -> {

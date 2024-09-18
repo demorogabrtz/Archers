@@ -1,3 +1,7 @@
+# 2.0.5
+
+- Fireproof ranged weapons with netherite or better material
+
 # 2.0.4
 
 - Configurable Power Shot bonus damage
