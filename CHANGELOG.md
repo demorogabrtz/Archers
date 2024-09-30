@@ -1,3 +1,7 @@
+# 2.1.0
+
+- Add new armor set: Netherite Ranger Armor
+
 # 2.0.5
 
 - Fireproof ranged weapons with netherite or better material

@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 public class ArcherArmorModel extends GeoModel<ArcherArmor> {
     @Override
     public Identifier getModelResource(ArcherArmor armor) {
-        var textureId = armor.getFirstLayerId();
+        var textureId = armor.customModelId;
         return Identifier.of(ArchersMod.ID, "geo/" + textureId.getPath() + ".geo.json");
     }
 

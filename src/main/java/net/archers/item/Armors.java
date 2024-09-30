@@ -7,18 +7,15 @@ import net.fabric_extras.ranged_weapon.api.EntityAttributes_RangedWeapon;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.spell_engine.api.item.ItemConfig;
 import net.spell_engine.api.item.armor.Armor;
-import net.spell_power.api.SpellSchools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,17 +39,23 @@ public class Armors {
         return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(ArchersMod.ID, name), material);
     }
 
-    public static RegistryEntry<ArmorMaterial> material_archer = material(
+    public static RegistryEntry<ArmorMaterial> material_t1 = material(
             "archer_armor",
             2, 3, 3, 2,
             9,
             SoundHelper.ARCHER_ARMOR_EQUIP.entry(), () -> { return Ingredient.ofItems(Items.LEATHER); });
 
-    public static RegistryEntry<ArmorMaterial> material_ranger = material(
+    public static RegistryEntry<ArmorMaterial> material_t2 = material(
             "ranger_armor",
             2, 3, 3, 2,
             10,
             SoundHelper.ARCHER_ARMOR_EQUIP.entry(), () -> { return Ingredient.ofItems(Items.TURTLE_SCUTE); });
+
+    public static RegistryEntry<ArmorMaterial> material_t3 = material(
+            "netherite_ranger_armor",
+            2, 3, 3, 2,
+            15,
+            SoundHelper.ARCHER_ARMOR_EQUIP.entry(), () -> { return Ingredient.ofItems(Items.NETHERITE_INGOT); });
 
 
     public static final ArrayList<Armor.Entry> entries = new ArrayList<>();
@@ -84,12 +87,14 @@ public class Armors {
     public static final float damage_T1 = 0.05F;
     public static final float haste_T2 = 0.03F;
     public static final float damage_T2 = 0.08F;
+    public static final float haste_T3 = 0.05F;
+    public static final float damage_T3 = 0.1F;
 
     public static final Armor.Set archerArmorSet_T1 = create(
-            material_archer,
+            material_t1,
             Identifier.of(ArchersMod.ID, "archer_armor"),
             15,
-            ArcherArmor::new,
+            ArcherArmor::archer,
             ItemConfig.ArmorSet.with(
                     new ItemConfig.ArmorSet.Piece(2)
                             .add(damageMultiplier(damage_T1)),
@@ -103,10 +108,10 @@ public class Armors {
             .armorSet();
 
     public static final Armor.Set archerArmorSet_T2 = create(
-            material_ranger,
+            material_t2,
             Identifier.of(ArchersMod.ID, "ranger_armor"),
             25,
-            ArcherArmor::new,
+            ArcherArmor::ranger,
             ItemConfig.ArmorSet.with(
                     new ItemConfig.ArmorSet.Piece(2)
                             .add(damageMultiplier(damage_T2))
@@ -120,6 +125,27 @@ public class Armors {
                     new ItemConfig.ArmorSet.Piece(2)
                             .add(damageMultiplier(damage_T2))
                             .add(hasteMultiplier(haste_T2))
+            ))
+            .armorSet();
+
+    public static final Armor.Set archerArmorSet_T3 = create(
+            material_t3,
+            Identifier.of(ArchersMod.ID, "netherite_ranger_armor"),
+            35,
+            ArcherArmor::ranger,
+            ItemConfig.ArmorSet.with(
+                    new ItemConfig.ArmorSet.Piece(2)
+                            .add(damageMultiplier(damage_T3))
+                            .add(hasteMultiplier(haste_T3)),
+                    new ItemConfig.ArmorSet.Piece(3)
+                            .add(damageMultiplier(damage_T3))
+                            .add(hasteMultiplier(haste_T3)),
+                    new ItemConfig.ArmorSet.Piece(3)
+                            .add(damageMultiplier(damage_T3))
+                            .add(hasteMultiplier(haste_T3)),
+                    new ItemConfig.ArmorSet.Piece(2)
+                            .add(damageMultiplier(damage_T3))
+                            .add(hasteMultiplier(haste_T3))
             ))
             .armorSet();
 
