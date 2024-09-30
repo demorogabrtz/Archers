@@ -17,6 +17,7 @@ import net.fabricmc.fabric.api.item.v1.EnchantmentEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.util.TriState;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -63,7 +64,8 @@ public class ArchersMod implements ModInitializer {
         // Apply some of the tweaks
         if (tweaksConfig.value.enable_infinity_for_crossbows) {
             EnchantmentEvents.ALLOW_ENCHANTING.register((enchantment, target, enchantingContext) -> {
-                if (enchantment.getKey().get().getValue().equals(Enchantments.INFINITY.getValue())) {
+                if (target.getItem() instanceof CrossbowItem &&
+                        enchantment.getKey().get().getValue().equals(Enchantments.INFINITY.getValue())) {
                     return TriState.TRUE;
                 }
                 return TriState.DEFAULT;

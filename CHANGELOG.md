@@ -1,6 +1,7 @@
 # 2.1.0
 
 - Add new armor set: Netherite Ranger Armor
+- Fix Infinity applicable to any enchantable item
 
 # 2.0.5
 
