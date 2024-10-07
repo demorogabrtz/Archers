@@ -1,3 +1,7 @@
+# 2.1.1
+
+- Update Ruby Heavy Crossbow texture
+
 # 2.1.0
 
 - Add new armor set: Netherite Ranger Armor
